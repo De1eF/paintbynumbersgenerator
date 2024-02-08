@@ -2982,7 +2982,7 @@ define("guiprocessmanager", ["require", "exports", "colorreductionmanagement", "
                             const txt = document.createElementNS(xmlns, "text");
                             txt.setAttribute("font-family", "Tahoma");
                             const nrOfDigits = (f.color + "").length;
-                            txt.setAttribute("font-size", (fontSize / nrOfDigits) + "");
+                            txt.setAttribute("font-size", fontSize * 50 / Math.sqrt(f.labelBounds.width * f.labelBounds.width + f.labelBounds.height * f.labelBounds.height) + "");
                             txt.setAttribute("dominant-baseline", "middle");
                             txt.setAttribute("text-anchor", "middle");
                             txt.setAttribute("fill", fontColor);
